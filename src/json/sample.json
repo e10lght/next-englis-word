@@ -1,0 +1,592 @@
+[
+  {
+    "word": "able",
+    "example": "Tom is able to solve complex math problems with ease.",
+    "exampleAnswer": "トムは、複雑な数学の問題を簡単に解くことができる",
+    "type": "形",
+    "explain": "できる"
+  },
+  {
+    "word": "abroad",
+    "example": "I plan to study abroad next year.",
+    "exampleAnswer": "来年、海外留学を計画しています",
+    "type": "副",
+    "explain": "海外で"
+  },
+  {
+    "word": "actually",
+    "example": "Actually, I don't like coffee much.",
+    "exampleAnswer": "実は、あまりコーヒーは好きではありません。",
+    "type": "副",
+    "explain": "実際"
+  },
+  {
+    "word": "add",
+    "example": "Could you add some sugar to my tea, please?",
+    "exampleAnswer": "お茶に砂糖を足してもらえますか？」",
+    "type": "動",
+    "explain": "加える"
+  },
+  {
+    "word": "agree",
+    "example": "I agree with your point of view.",
+    "exampleAnswer": "あなたの見解に賛成です。",
+    "type": "動",
+    "explain": "同意する"
+  },
+  {
+    "word": "almost",
+    "example": "I'm almost finished with my work",
+    "exampleAnswer": "仕事はもうほぼ終わりました。",
+    "type": "副",
+    "explain": "もう少しで"
+  },
+  {
+    "word": "already",
+    "example": "I have already eaten lunch.",
+    "exampleAnswer": "もう昼食は食べました。",
+    "type": "副",
+    "explain": "すでに"
+  },
+  {
+    "word": "also",
+    "example": "She is a teacher, and also a writer.",
+    "exampleAnswer": "彼女は教師であり、また作家でもあります",
+    "type": "副",
+    "explain": "また"
+  },
+  {
+    "word": "always",
+    "example": "He always wakes up early.",
+    "exampleAnswer": "彼はいつも早起きです。",
+    "type": "副",
+    "explain": "いつも"
+  },
+  {
+    "word": "amount",
+    "example": "The amount of money he has is incredible.",
+    "exampleAnswer": "彼が持っている金額は信じられない",
+    "type": "名",
+    "explain": "量"
+  },
+  {
+    "word": "approach",
+    "example": "His approach to the problem was effective.",
+    "exampleAnswer": "彼の問題へのアプローチは効果的でした。",
+    "type": "名 動",
+    "explain": "方法　 近づく"
+  },
+  { "word": "arrive", "example": "", "exampleAnswer": "", "type": "動", "explain": "到着する" },
+  { "word": "attention", "example": "", "exampleAnswer": "", "type": "名", "explain": "注意" },
+  {
+    "word": "average",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 名",
+    "explain": "平均的な　 平均"
+  },
+  { "word": "become", "example": "", "exampleAnswer": "", "type": "動", "explain": "～になる" },
+  { "word": "begin", "example": "", "exampleAnswer": "", "type": "動", "explain": "始める" },
+  { "word": "believe", "example": "", "exampleAnswer": "", "type": "動", "explain": "信じる" },
+  { "word": "below", "example": "", "exampleAnswer": "", "type": "副", "explain": "下に" },
+  { "word": "bit", "example": "", "exampleAnswer": "", "type": "名 副", "explain": "少し　 少し" },
+  { "word": "borrow", "example": "", "exampleAnswer": "", "type": "動", "explain": "借りる" },
+  {
+    "word": "break",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "壊す　 休憩"
+  },
+  { "word": "broad", "example": "", "exampleAnswer": "", "type": "形", "explain": "幅広い" },
+  { "word": "busy", "example": "", "exampleAnswer": "", "type": "形", "explain": "忙しい" },
+  { "word": "cancel", "example": "", "exampleAnswer": "", "type": "動", "explain": "中止する" },
+  { "word": "careful", "example": "", "exampleAnswer": "", "type": "形", "explain": "丁寧な" },
+  { "word": "carefully", "example": "", "exampleAnswer": "", "type": "副", "explain": "丁寧に" },
+  { "word": "certain", "example": "", "exampleAnswer": "", "type": "形", "explain": "確かな" },
+  { "word": "choose", "example": "", "exampleAnswer": "", "type": "動", "explain": "選ぶ" },
+  {
+    "word": "clean",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 動",
+    "explain": "きれいな　 きれいにする"
+  },
+  {
+    "word": "clear",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 動",
+    "explain": "はっきりした　 片付ける"
+  },
+  { "word": "clerk", "example": "", "exampleAnswer": "", "type": "名", "explain": "事務員" },
+  {
+    "word": "close",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 動",
+    "explain": "近い　 閉める"
+  },
+  { "word": "collect", "example": "", "exampleAnswer": "", "type": "動", "explain": "集める" },
+  { "word": "common", "example": "", "exampleAnswer": "", "type": "形", "explain": "共通の" },
+  { "word": "company", "example": "", "exampleAnswer": "", "type": "名", "explain": "会社" },
+  { "word": "compare", "example": "", "exampleAnswer": "", "type": "動", "explain": "比べる" },
+  { "word": "condition", "example": "", "exampleAnswer": "", "type": "名", "explain": "状態" },
+  { "word": "connect", "example": "", "exampleAnswer": "", "type": "動", "explain": "接続する" },
+  {
+    "word": "contact",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "連絡する　 連絡先"
+  },
+  { "word": "continue", "example": "", "exampleAnswer": "", "type": "動", "explain": "続く" },
+  { "word": "convenient", "example": "", "exampleAnswer": "", "type": "形", "explain": "便利な" },
+  { "word": "conversation", "example": "", "exampleAnswer": "", "type": "名", "explain": "会話" },
+  {
+    "word": "corporation",
+    "example": "ABC Corporation is a leading technology company in the industry.",
+    "exampleAnswer": "",
+    "type": "名",
+    "explain": "会社"
+  },
+  { "word": "customer", "example": "", "exampleAnswer": "", "type": "名", "explain": "客" },
+  {
+    "word": "damage",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "損害　 損害を与える"
+  },
+  { "word": "deal", "example": "", "exampleAnswer": "", "type": "動 名", "explain": "扱う　 取引" },
+  { "word": "decide", "example": "", "exampleAnswer": "", "type": "動", "explain": "決める" },
+  { "word": "decorate", "example": "", "exampleAnswer": "", "type": "動", "explain": "飾る" },
+  { "word": "demonstration", "example": "", "exampleAnswer": "", "type": "名", "explain": "実演" },
+  { "word": "different", "example": "", "exampleAnswer": "", "type": "形", "explain": "異なる" },
+  { "word": "difficult", "example": "", "exampleAnswer": "", "type": "形", "explain": "難しい" },
+  { "word": "discover", "example": "", "exampleAnswer": "", "type": "動", "explain": "発見する" },
+  { "word": "discuss", "example": "", "exampleAnswer": "", "type": "動", "explain": "話し合う" },
+  {
+    "word": "double",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 形",
+    "explain": "二倍にする　 二倍の"
+  },
+  { "word": "easy", "example": "", "exampleAnswer": "", "type": "形", "explain": "簡単な" },
+  { "word": "education", "example": "", "exampleAnswer": "", "type": "名", "explain": "教育" },
+  { "word": "effect", "example": "", "exampleAnswer": "", "type": "名", "explain": "効果" },
+  { "word": "effort", "example": "", "exampleAnswer": "", "type": "名", "explain": "努力" },
+  { "word": "electricity", "example": "", "exampleAnswer": "", "type": "名", "explain": "電気" },
+  {
+    "word": "empty",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 空",
+    "explain": "undefined undefined"
+  },
+  { "word": "の", "example": "", "exampleAnswer": "", "type": "動", "explain": "空にする" },
+  { "word": "enjoy", "example": "", "exampleAnswer": "", "type": "動", "explain": "楽しむ" },
+  {
+    "word": "enough",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 副",
+    "explain": "十分な　 十分に"
+  },
+  { "word": "entrance", "example": "", "exampleAnswer": "", "type": "名", "explain": "入口" },
+  { "word": "especially", "example": "", "exampleAnswer": "", "type": "副", "explain": "特に" },
+  { "word": "example", "example": "", "exampleAnswer": "", "type": "名", "explain": "例" },
+  {
+    "word": "exchange",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "交換する　 交換"
+  },
+  {
+    "word": "exciting",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形",
+    "explain": "人を興奮させるような"
+  },
+  {
+    "word": "expensive",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形",
+    "explain": "値段が高い"
+  },
+  {
+    "word": "experience",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "経験　 経験する"
+  },
+  { "word": "explain", "example": "", "exampleAnswer": "", "type": "動", "explain": "説明する" },
+  {
+    "word": "extra",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 名",
+    "explain": "余分な　 余分な物　"
+  },
+  {
+    "word": "fact",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名",
+    "explain": "事実"
+  },
+  { "word": "fast", "example": "", "exampleAnswer": "", "type": "形 副", "explain": "速い　 速く" },
+  {
+    "word": "favorite",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 名",
+    "explain": "好きな　 お気に入り"
+  },
+  { "word": "feedback", "example": "", "exampleAnswer": "", "type": "名", "explain": "感想" },
+  {
+    "word": "film",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "映画　 撮影する"
+  },
+  { "word": "final", "example": "", "exampleAnswer": "", "type": "形", "explain": "最終的な" },
+  {
+    "word": "forecast",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "予想　 予想する"
+  },
+  {
+    "word": "form",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "用紙　 結成する"
+  },
+  { "word": "furniture", "example": "", "exampleAnswer": "", "type": "名", "explain": "家具" },
+  {
+    "word": "further",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 副",
+    "explain": "さらなる　 さらに"
+  },
+  { "word": "gallery", "example": "", "exampleAnswer": "", "type": "名", "explain": "美術館" },
+  { "word": "glad", "example": "", "exampleAnswer": "", "type": "形", "explain": "嬉しい" },
+  { "word": "government", "example": "", "exampleAnswer": "", "type": "名", "explain": "政府" },
+  { "word": "graduate", "example": "", "exampleAnswer": "", "type": "動", "explain": "卒業する" },
+  { "word": "growth", "example": "", "exampleAnswer": "", "type": "名", "explain": "成長" },
+  { "word": "happen", "example": "", "exampleAnswer": "", "type": "動", "explain": "起こる" },
+  { "word": "healthy", "example": "", "exampleAnswer": "", "type": "形", "explain": "健康的な" },
+  {
+    "word": "I'm afraid",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "なし",
+    "explain": "残念ながら"
+  },
+  {
+    "word": "instead",
+    "example": "",
+    "exampleAnswer": "",
+    "type": " 副",
+    "explain": "代わりに"
+  },
+  {
+    "word": "interested",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形",
+    "explain": "関心がある"
+  },
+  {
+    "word": "international",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形",
+    "explain": "国際的な"
+  },
+  {
+    "word": "interview",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "面接　 面接する"
+  },
+  { "word": "item", "example": "", "exampleAnswer": "", "type": "名", "explain": "物" },
+  { "word": "join", "example": "", "exampleAnswer": "", "type": "動", "explain": "加わる" },
+  { "word": "law", "example": "", "exampleAnswer": "", "type": "名", "explain": "法律" },
+  { "word": "lecture", "example": "", "exampleAnswer": "", "type": "名", "explain": "講義" },
+  { "word": "let", "example": "", "exampleAnswer": "", "type": "動", "explain": "させる" },
+  { "word": "library", "example": "", "exampleAnswer": "", "type": "名", "explain": "図書館" },
+  { "word": "loan", "example": "", "exampleAnswer": "", "type": "名", "explain": "融資" },
+  { "word": "loss", "example": "", "exampleAnswer": "", "type": "名", "explain": "損失" },
+  {
+    "word": "lower",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 動",
+    "explain": "より低い　 下げる"
+  },
+  { "word": "main", "example": "", "exampleAnswer": "", "type": "形", "explain": "主な" },
+  { "word": "major", "example": "", "exampleAnswer": "", "type": "形", "explain": "主要な" },
+  { "word": "material", "example": "", "exampleAnswer": "", "type": "名", "explain": "材料" },
+  { "word": "meal", "example": "", "exampleAnswer": "", "type": "名", "explain": "食事" },
+  { "word": "meaning", "example": "", "exampleAnswer": "", "type": "名", "explain": "意味" },
+  { "word": "medical", "example": "", "exampleAnswer": "", "type": "形", "explain": "医療の" },
+  {
+    "word": "monthly",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 副",
+    "explain": "毎月の　 毎月　"
+  },
+  {
+    "word": "111",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "mostly 副",
+    "explain": "undefined 主に"
+  },
+  { "word": "national", "example": "", "exampleAnswer": "", "type": "形", "explain": "全国的な" },
+  {
+    "word": "nearby",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 副",
+    "explain": "近くの　 近くに"
+  },
+  { "word": "noise", "example": "", "exampleAnswer": "", "type": "名", "explain": "騒音" },
+  {
+    "word": "notice",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "お知らせ　 気付く"
+  },
+  { "word": "novel", "example": "", "exampleAnswer": "", "type": "名", "explain": "小説" },
+  {
+    "word": "official",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 名",
+    "explain": "公式の　 （政府などの）担当者"
+  },
+  { "word": "often", "example": "", "exampleAnswer": "", "type": "副", "explain": "しばしば" },
+  { "word": "opinion", "example": "", "exampleAnswer": "", "type": "名", "explain": "意見" },
+  {
+    "word": "own",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 動",
+    "explain": "自身の　 所有する"
+  },
+  {
+    "word": "park",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "駐車する　 公園"
+  },
+  { "word": "part", "example": "", "exampleAnswer": "", "type": "名", "explain": "部分" },
+  { "word": "passenger", "example": "", "exampleAnswer": "", "type": "名", "explain": "乗客" },
+  { "word": "patient", "example": "", "exampleAnswer": "", "type": "名", "explain": "患者" },
+  { "word": "perform", "example": "", "exampleAnswer": "", "type": "動", "explain": "演じる" },
+  { "word": "perhaps", "example": "", "exampleAnswer": "", "type": "副", "explain": "たぶん" },
+  { "word": "personal", "example": "", "exampleAnswer": "", "type": "形", "explain": "個人の" },
+  { "word": "position", "example": "", "exampleAnswer": "", "type": "名", "explain": "職" },
+  { "word": "possible", "example": "", "exampleAnswer": "", "type": "形", "explain": "可能な" },
+  {
+    "word": "press",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "報道機関　 押す"
+  },
+  {
+    "word": "pretty",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "副 形",
+    "explain": "かなり　 かわいい"
+  },
+  { "word": "probably", "example": "", "exampleAnswer": "", "type": "副", "explain": "おそらく" },
+  { "word": "problem", "example": "", "exampleAnswer": "", "type": "名", "explain": "問題" },
+  { "word": "product", "example": "", "exampleAnswer": "", "type": "名", "explain": "製品" },
+  {
+    "word": "progress",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 動",
+    "explain": "進歩　 進む"
+  },
+  {
+    "word": "promise",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "約束する　 約束"
+  },
+  { "word": "protect", "example": "", "exampleAnswer": "", "type": "動", "explain": "保護する" },
+  { "word": "proud", "example": "", "exampleAnswer": "", "type": "形", "explain": "誇りに思う" },
+  {
+    "word": "public",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 名",
+    "explain": "公共の　 一般の人"
+  },
+  { "word": "purpose", "example": "", "exampleAnswer": "", "type": "名", "explain": "目的" },
+  {
+    "word": "quality",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "名 形",
+    "explain": "質　 質が高い"
+  },
+  { "word": "quantity", "example": "", "exampleAnswer": "", "type": "名", "explain": "量" },
+  { "word": "quickly", "example": "", "exampleAnswer": "", "type": "副", "explain": "速く" },
+  { "word": "quite", "example": "", "exampleAnswer": "", "type": "副", "explain": "かなり" },
+  { "word": "rather", "example": "", "exampleAnswer": "", "type": "副", "explain": "むしろ" },
+  { "word": "ready", "example": "", "exampleAnswer": "", "type": "形", "explain": "準備ができて" },
+  { "word": "realize", "example": "", "exampleAnswer": "", "type": "動", "explain": "気付く" },
+  { "word": "receive", "example": "", "exampleAnswer": "", "type": "動", "explain": "受け取る" },
+  { "word": "relationship", "example": "", "exampleAnswer": "", "type": "名", "explain": "関係" },
+  {
+    "word": "remain",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動",
+    "explain": "～のままでいる"
+  },
+  { "word": "remember", "example": "", "exampleAnswer": "", "type": "動", "explain": "思い出す" },
+  { "word": "reply", "example": "", "exampleAnswer": "", "type": "動", "explain": "返事をする" },
+  {
+    "word": "request",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "依頼する　 依頼"
+  },
+  { "word": "rest", "example": "", "exampleAnswer": "", "type": "名 動", "explain": "残り　 休む" },
+  {
+    "word": "return",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "戻す　 返品"
+  },
+  {
+    "word": "ride",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "乗る　 乗ること"
+  },
+  {
+    "word": "rise",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "上がる　 上昇"
+  },
+  { "word": "role", "example": "", "exampleAnswer": "", "type": "名", "explain": "役割" },
+  { "word": "safe", "example": "", "exampleAnswer": "", "type": "形", "explain": "安全な" },
+  { "word": "safety", "example": "", "exampleAnswer": "", "type": "名", "explain": "安全" },
+  { "word": "save", "example": "", "exampleAnswer": "", "type": "動", "explain": "節約する" },
+  { "word": "science", "example": "", "exampleAnswer": "", "type": "名", "explain": "科学" },
+  { "word": "seem", "example": "", "exampleAnswer": "", "type": "動", "explain": "～のようだ" },
+  {
+    "word": "select",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 形",
+    "explain": "選ぶ　 厳選された"
+  },
+  { "word": "series", "example": "", "exampleAnswer": "", "type": "名", "explain": "連続" },
+  { "word": "sightseeing", "example": "", "exampleAnswer": "", "type": "名", "explain": "観光" },
+  {
+    "word": "sign",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "署名する　 看板"
+  },
+  { "word": "similar", "example": "", "exampleAnswer": "", "type": "形", "explain": "似た" },
+  { "word": "situation", "example": "", "exampleAnswer": "", "type": "名", "explain": "状況" },
+  { "word": "society", "example": "", "exampleAnswer": "", "type": "名", "explain": "社会" },
+  { "word": "sometime", "example": "", "exampleAnswer": "", "type": "副", "explain": "いつか" },
+  { "word": "soon", "example": "", "exampleAnswer": "", "type": "副", "explain": "もうすぐ" },
+  { "word": "source", "example": "", "exampleAnswer": "", "type": "名", "explain": "源" },
+  { "word": "spend", "example": "", "exampleAnswer": "", "type": "動", "explain": "費やす" },
+  {
+    "word": "stay",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "とどまる　 滞在"
+  },
+  { "word": "still", "example": "", "exampleAnswer": "", "type": "副", "explain": "まだ" },
+  { "word": "succeed", "example": "", "exampleAnswer": "", "type": "動", "explain": "成功する" },
+  { "word": "success", "example": "", "exampleAnswer": "", "type": "名", "explain": "成功" },
+  {
+    "word": "support",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "支持する　 支持"
+  },
+  { "word": "sure", "example": "", "exampleAnswer": "", "type": "形", "explain": "確かな" },
+  { "word": "surprising", "example": "", "exampleAnswer": "", "type": "形", "explain": "驚くべき" },
+  { "word": "task", "example": "", "exampleAnswer": "", "type": "名", "explain": "任務" },
+  { "word": "tax", "example": "", "exampleAnswer": "", "type": "名", "explain": "税" },
+  { "word": "technology", "example": "", "exampleAnswer": "", "type": "名", "explain": "技術" },
+  { "word": "tourist", "example": "", "exampleAnswer": "", "type": "名", "explain": "観光客" },
+  { "word": "traffic", "example": "", "exampleAnswer": "", "type": "名", "explain": "交通量" },
+  { "word": "true", "example": "", "exampleAnswer": "", "type": "形", "explain": "本当の" },
+  { "word": "useful", "example": "", "exampleAnswer": "", "type": "形", "explain": "役に立つ" },
+  { "word": "usually", "example": "", "exampleAnswer": "", "type": "副", "explain": "普段" },
+  { "word": "variety", "example": "", "exampleAnswer": "", "type": "名", "explain": "種類" },
+  {
+    "word": "visit",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "訪れる　 訪問"
+  },
+  { "word": "visitor", "example": "", "exampleAnswer": "", "type": "名", "explain": "訪問者" },
+  { "word": "warm", "example": "", "exampleAnswer": "", "type": "形", "explain": "温かい" },
+  { "word": "weather", "example": "", "exampleAnswer": "", "type": "名", "explain": "天気" },
+  {
+    "word": "welcome",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "動 名",
+    "explain": "歓迎する　 歓迎"
+  },
+  {
+    "word": "whole",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "形 名",
+    "explain": "全体の　 全体"
+  },
+  { "word": "wide", "example": "", "exampleAnswer": "", "type": "形", "explain": "広い" },
+  { "word": "workshop", "example": "", "exampleAnswer": "", "type": "名", "explain": "研修会" },
+  { "word": "worried", "example": "", "exampleAnswer": "", "type": "形", "explain": "心配して" },
+  {
+    "word": "yet",
+    "example": "",
+    "exampleAnswer": "",
+    "type": "副 接",
+    "explain": "まだ　 けれども"
+  }
+]

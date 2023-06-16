@@ -1,0 +1,652 @@
+able
+形 できる
+2
+abroad
+副 海外で
+3
+actually
+副 実際
+4
+add
+動 加える
+5
+agree
+動 同意する
+6
+almost
+副 もう少しで
+7
+already
+副 すでに
+8
+also
+副 また
+9
+always
+副 いつも
+10
+amount
+名 量
+11
+approach
+名 方法　
+動 近づく
+12
+arrive
+動 到着する
+13
+attention
+名 注意
+14
+average
+形 平均的な　
+名 平均
+15
+become
+動 ～になる
+16
+begin
+動 始める
+17
+believe
+動 信じる
+18
+below
+副 下に
+19
+bit
+名 少し　
+副 少し
+20
+borrow
+動 借りる
+21
+break
+動 壊す　
+名 休憩
+22
+broad
+形 幅広い
+23
+busy
+形 忙しい
+24
+cancel
+動 中止する
+25
+careful
+形 丁寧な
+26
+carefully
+副 丁寧に
+27
+certain
+形 確かな
+28
+choose
+動 選ぶ
+29
+clean
+形 きれいな　
+動 きれいにする
+30
+clear
+形 はっきりした　
+動 片付ける
+31
+clerk
+名 事務員
+32
+close
+形 近い　
+動 閉める
+33
+collect
+動 集める
+34
+common
+形 共通の
+35
+company
+名 会社
+36
+compare
+動 比べる
+37
+condition
+名 状態
+38
+connect
+動 接続する
+39
+contact
+動 連絡する　
+名 連絡先
+40
+continue
+動 続く
+41
+convenient
+形 便利な
+42
+conversation
+名 会話
+43
+corporation
+名 会社
+44
+customer
+名 客
+45
+damage
+名 損害　
+動 損害を与える
+46
+deal
+動 扱う　
+名 取引
+47
+decide
+動 決める
+48
+decorate
+動 飾る
+49
+demonstration
+名 実演
+50
+different
+形 異なる
+51
+difficult
+形 難しい
+52
+discover
+動 発見する
+53
+discuss
+動 話し合う
+54
+double
+動 二倍にする　
+形 二倍の
+55
+easy
+形 簡単な
+56
+education
+名 教育
+57
+effect
+名 効果
+58
+effort
+名 努力
+59
+electricity
+名 電気
+60
+empty
+形
+空
+から
+の　
+動 空にする
+61
+enjoy
+動 楽しむ
+62
+enough
+形 十分な　
+副 十分に
+63
+entrance
+名 入口
+64
+especially
+副 特に
+65
+example
+名 例
+66
+exchange
+動 交換する　
+名 交換
+67
+exciting
+形 人を興奮させるような
+68
+expensive
+形 値段が高い
+69
+experience
+名 経験　
+動 経験する
+70
+explain
+動 説明する
+71
+extra
+形 余分な　
+名 余分な物　
+副 余分に
+72
+fact
+名 事実
+73
+fast
+形 速い　
+副 速く
+74
+favorite
+形 好きな　
+名 お気に入り
+75
+feedback
+名 感想
+76
+film
+名 映画　
+動 撮影する
+77
+final
+形 最終的な
+78
+forecast
+名 予想　
+動 予想する
+79
+form
+名 用紙　
+動 結成する
+80
+furniture
+名 家具
+81
+further
+形 さらなる　
+副 さらに
+82
+gallery
+名 美術館
+83
+glad
+形 嬉しい
+84
+government
+名 政府
+85
+graduate
+動 卒業する
+86
+growth
+名 成長
+87
+happen
+動 起こる
+88
+healthy
+形 健康的な
+89
+I'm afraid 残念ながら
+90
+important
+形 重要な
+91
+instead
+副 代わりに
+92
+interested
+形 関心がある
+93
+international
+形 国際的な
+94
+interview
+名 面接　
+動 面接する
+95
+item
+名 物
+96
+join
+動 加わる
+97
+law
+名 法律
+98
+lecture
+名 講義
+99
+let
+動 させる
+100
+library
+名 図書館
+101
+loan
+名 融資
+102
+loss
+名 損失
+103
+lower
+形 より低い　
+動 下げる
+104
+main
+形 主な
+105
+major
+形 主要な
+106
+material
+名 材料
+107
+meal
+名 食事
+108
+meaning
+名 意味
+109
+medical
+形 医療の
+110
+monthly
+形 毎月の　
+副 毎月　
+名 月刊誌
+111
+mostly
+副 主に
+112
+national
+形 全国的な
+113
+nearby
+形 近くの　
+副 近くに
+114
+noise
+名 騒音
+115
+notice
+名 お知らせ　
+動 気付く
+116
+novel
+名 小説
+117
+official
+形 公式の　
+名 （政府などの）担当者
+118
+often
+副 しばしば
+119
+opinion
+名 意見
+120
+own
+形 自身の　
+動 所有する
+121
+park
+動 駐車する　
+名 公園
+122
+part
+名 部分
+123
+passenger
+名 乗客
+124
+patient
+名 患者
+125
+perform
+動 演じる
+126
+perhaps
+副 たぶん
+127
+personal
+形 個人の
+128
+position
+名 職
+129
+possible
+形 可能な
+130
+press
+名 報道機関　
+動 押す
+131
+pretty
+副 かなり　
+形 かわいい
+132
+probably
+副 おそらく
+133
+problem
+名 問題
+134
+product
+名 製品
+135
+progress
+名 進歩　
+動 進む
+136
+promise
+動 約束する　
+名 約束
+137
+protect
+動 保護する
+138
+proud
+形 誇りに思う
+139
+public
+形 公共の　
+名 一般の人
+140
+purpose
+名 目的
+141
+quality
+名 質　
+形 質が高い
+142
+quantity
+名 量
+143
+quickly
+副 速く
+144
+quite
+副 かなり
+145
+rather
+副 むしろ
+146
+ready
+形 準備ができて
+147
+realize
+動 気付く
+148
+receive
+動 受け取る
+149
+relationship
+名 関係
+150
+remain
+動 ～のままでいる
+151
+remember
+動 思い出す
+152
+reply
+動 返事をする
+153
+request
+動 依頼する　
+名 依頼
+154
+rest
+名 残り　
+動 休む
+155
+return
+動 戻す　
+名 返品
+156
+ride
+動 乗る　
+名 乗ること
+157
+rise
+動 上がる　
+名 上昇
+158
+role
+名 役割
+159
+safe
+形 安全な
+160
+safety
+名 安全
+161
+save
+動 節約する
+162
+science
+名 科学
+163
+seem
+動 ～のようだ
+164
+select
+動 選ぶ　
+形 厳選された
+165
+series
+名 連続
+166
+sightseeing
+名 観光
+167
+sign
+動 署名する　
+名 看板
+168
+similar
+形 似た
+169
+situation
+名 状況
+170
+society
+名 社会
+171
+sometime
+副 いつか
+172
+soon
+副 もうすぐ
+173
+source
+名 源
+174
+spend
+動 費やす
+175
+stay
+動 とどまる　
+名 滞在
+176
+still
+副 まだ
+177
+succeed
+動 成功する
+178
+success
+名 成功
+179
+support
+動 支持する　
+名 支持
+180
+sure
+形 確かな
+181
+surprising
+形 驚くべき
+182
+task
+名 任務
+183
+tax
+名 税
+184
+technology
+名 技術
+185
+tourist
+名 観光客
+186
+traffic
+名 交通量
+187
+true
+形 本当の
+188
+useful
+形 役に立つ
+189
+usually
+副 普段
+190
+variety
+名 種類
+191
+visit
+動 訪れる　
+名 訪問
+192
+visitor
+名 訪問者
+193
+warm
+形 温かい
+194
+weather
+名 天気
+195
+welcome
+動 歓迎する　
+名 歓迎
+196
+whole
+形 全体の　
+名 全体
+197
+wide
+形 広い
+198
+workshop
+名 研修会
+199
+worried
+形 心配して
+200
+yet
+副 まだ　
+接 けれども
