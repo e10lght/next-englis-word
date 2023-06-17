@@ -5,10 +5,20 @@ import styles from "@/styles/Home.module.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Sections from "../components/sections";
 import Header from "../components/header";
+import supabase from "../../utils/supabase";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  useEffect(() => {
+    const fetch = async () => {
+      const result = await supabase.from("wordlist").select("*");
+      console.log(result);
+    };
+    fetch();
+  }, []);
+
   return (
     <>
       <ChakraProvider>

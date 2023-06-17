@@ -1,35 +1,60 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import supabase from "../../utils/supabase";
 import json from "../json/sample.json";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { userState } from "@/store/auth";
 
 type Words = {
+  id: number;
+  created_ad: Date;
+  updated_ad: Date;
   word: string;
   example?: string;
-  exampleAnswer?: string;
+  exampleanswer?: string;
   type: string;
   explain: string;
+  sectionid: string;
 };
 
 const Questions = () => {
   const [answer, setAnswer] = useState("");
   const [wordList, setWordList] = useState<Words[]>([]);
   const [correctAnswer, setCorrectAnswer] = useState<Words>();
+  // useRecoilValueで値だけ宣言することも可能
+  const user = useRecoilValue(userState);
 
   useEffect(() => {
-    setWordList(json);
-    console.log(json[0]);
-    let str = "";
-    for (const word of json) {
-      str += word.word + ",";
-    }
-    console.log(str);
-    const selectWord = json[0] as Words;
-    const ramdom = Math.floor(Math.random() * json.length);
+    // apiなどからユーザー情報を取得して、setUserでグローバルstateを更新する
+    console.log(user);
 
-    console.log(selectWord.word);
-    console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
-    selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
-    setCorrectAnswer(selectWord);
+    const fetchWordList = async () => {
+      const { data: resultWordList, error: wordListError } = await supabase
+        .from("wordlist")
+        .select()
+        .eq("sectionid", 18);
+      return resultWordList as Words[];
+    };
+
+    const getWordList = async () => {
+      const resultWordList = await fetchWordList();
+      setWordList(resultWordList);
+      console.log(resultWordList);
+
+      const ramdom = Math.floor(Math.random() * resultWordList.length);
+      console.log(ramdom);
+      const selectWord = resultWordList[ramdom] as Words;
+      resultWordList.splice(ramdom, 1);
+      console.log(resultWordList.length);
+      setWordList(resultWordList);
+
+      console.log(selectWord.word);
+      console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
+      selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
+      setCorrectAnswer(selectWord);
+    };
+
+    getWordList();
   }, []);
 
   const inputAnswer = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +64,18 @@ const Questions = () => {
     console.log(answer);
     console.log(answer === correctAnswer!.word);
     setAnswer("");
+  };
+  const nextQuestion = () => {
+    const ramdom = Math.floor(Math.random() * wordList.length);
+    console.log(ramdom);
+    const selectWord = wordList[ramdom] as Words;
+    const targetWordList = [...wordList];
+    targetWordList.splice(ramdom, 1);
+    setWordList(targetWordList);
+    console.log(selectWord.word);
+    console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
+    selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
+    setCorrectAnswer(selectWord);
   };
 
   return (
@@ -52,11 +89,13 @@ const Questions = () => {
       <div>Questions</div>
       <p>{correctAnswer && correctAnswer.explain}</p>
       <p>{correctAnswer && correctAnswer.example}</p>
-      <p>{correctAnswer && correctAnswer.exampleAnswer}</p>
+      <p>{correctAnswer && correctAnswer.exampleanswer}</p>
       <p>{correctAnswer && correctAnswer.type}</p>
       <p>{correctAnswer && correctAnswer.word}</p>
       <input type="text" onChange={inputAnswer} />
       <button onClick={submitAnswer}>回答</button>
+      <button>PASS</button>
+      <button onClick={nextQuestion}>次の問題</button>
     </>
   );
 };
