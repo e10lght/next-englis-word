@@ -4,6 +4,8 @@ import supabase from "../../utils/supabase";
 import json from "../json/sample.json";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { wordListState } from "@/store/auth";
+import { useRouter } from "next/router";
+import e from "express";
 
 type Words = {
   id: number;
@@ -21,62 +23,83 @@ const Questions = () => {
   const [answer, setAnswer] = useState("");
   const [wordList, setWordList] = useState<Words[]>([]);
   const [correctAnswer, setCorrectAnswer] = useState<Words>();
+  const [removeIds, setRemoveId] = useState<string[]>([]);
   // useRecoilValueで値だけ宣言することも可能
   const sectionWordList = useRecoilValue(wordListState);
+  const router = useRouter();
+  const id = Array.isArray(router.query.id) ? router.query.id[0] : router.query.id;
 
   useEffect(() => {
     // apiなどからユーザー情報を取得して、setUserでグローバルstateを更新する
-    console.log(sectionWordList);
+    console.log("useEffect");
+    // console.log(sectionWordList);
+    console.log(removeIds);
 
-    const fetchWordList = async () => {
-      const { data: resultWordList, error: wordListError } = await supabase
-        .from("wordlist")
-        .select()
-        .eq("section_id", 18);
-      return resultWordList as Words[];
-    };
+    const getWordList = async (id: string) => {
+      setWordList(sectionWordList);
+      //   const ramdom = Math.floor(Math.random() * sectionWordList.length);
+      //   console.log(ramdom);
 
-    const getWordList = async () => {
-      //   const resultWordList = await fetchWordList();
-      //   setWordList(resultWordList);
-      //   console.log(resultWordList);
+      //   let selectWord;
+      //   if (id) {
+      const selectWord = sectionWordList[Number(id)] as Words;
+      //   } else {
+      //     selectWord = sectionWordList[ramdom] as Words;
+      //   }
+      //   sectionWordList.splice(ramdom, 1);
+      //   console.log(sectionWordList.length);
+      let isDuplicateId = removeIds.find((removeId) => removeId === id);
+      if (!isDuplicateId) {
+        setRemoveId([...removeIds, id]);
+      }
       setWordList(sectionWordList);
 
-      const ramdom = Math.floor(Math.random() * sectionWordList.length);
-      console.log(ramdom);
-      const selectWord = sectionWordList[ramdom] as Words;
-      sectionWordList.splice(ramdom, 1);
-      console.log(sectionWordList.length);
-      setWordList(sectionWordList);
-
-      console.log(selectWord.word);
-      console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
+      //   console.log(selectWord.word);
+      //   console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
       selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
       setCorrectAnswer(selectWord);
     };
 
-    getWordList();
-  }, []);
+    getWordList(id!);
+  }, [id]);
 
   const inputAnswer = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
   };
   const submitAnswer = () => {
-    console.log(answer);
-    console.log(answer === correctAnswer!.word);
+    // console.log(answer);
+    // console.log(answer === correctAnswer!.word);
     setAnswer("");
   };
   const nextQuestion = () => {
-    const ramdom = Math.floor(Math.random() * wordList.length);
+    let ramdom = Math.floor(Math.random() * wordList.length);
+    let isDuplicateId = removeIds.find((removeId) => removeId === String(ramdom));
+    console.log(isDuplicateId);
+    if (removeIds.length !== wordList.length) {
+      while (isDuplicateId) {
+        ramdom = Math.floor(Math.random() * wordList.length);
+        isDuplicateId = removeIds.find((id) => id === String(ramdom));
+      }
+    } else {
+      router.push({
+        pathname: "/",
+      });
+    }
     console.log(ramdom);
-    const selectWord = wordList[ramdom] as Words;
-    const targetWordList = [...wordList];
-    targetWordList.splice(ramdom, 1);
-    setWordList(targetWordList);
-    console.log(selectWord.word);
-    console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
-    selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
-    setCorrectAnswer(selectWord);
+
+    router.push({
+      pathname: router.pathname,
+      query: { id: ramdom },
+    });
+
+    // const selectWord = wordList[ramdom] as Words;
+    // const targetWordList = [...wordList];
+    // targetWordList.splice(ramdom, 1);
+    // setWordList(targetWordList);
+    // console.log(selectWord.word);
+    // console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
+    // selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
+    // setCorrectAnswer(selectWord);
   };
 
   return (

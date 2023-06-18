@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import supabase from "../../utils/supabase";
@@ -18,24 +19,29 @@ type Words = {
 
 const Choice = () => {
   const [sectionWordList, setSectionWordList] = useRecoilState(wordListState);
+  const router = useRouter();
+  const keyword = Array.isArray(router.query.keyword)
+    ? router.query.keyword[0]
+    : router.query.keyword;
+  console.log(keyword);
 
   useEffect(() => {
-    const fetchWordList = async () => {
+    const fetchWordList = async (keyword: string) => {
+      console.log(keyword);
+      if (!keyword) return;
       const { data: resultWordList, error: wordListError } = await supabase
         .from("wordlist")
         .select()
-        .eq("section_id", 18);
+        .eq("section_id", keyword);
       const result = resultWordList as Words[];
-      console.log(result);
       setSectionWordList(result);
-      return resultWordList as Words[];
     };
-    fetchWordList();
-  }, []);
+    fetchWordList(keyword!);
+  }, [keyword]);
   return (
     <>
       <div>Choice</div>
-      <Link href={{ pathname: "/questions" }}>
+      <Link href={{ pathname: "/questions", query: { id: 0 } }}>
         <a>出題ページ</a>
       </Link>
       <Link href={{ pathname: "/itemlist" }}>

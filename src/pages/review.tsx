@@ -13,9 +13,11 @@ import {
   TableContainer,
   useBreakpointValue,
   Box,
+  Modal,
 } from "@chakra-ui/react";
 import supabase from "../../utils/supabase";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
 
 type Words = {
   id: number;
@@ -57,8 +59,6 @@ const Review = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   useEffect(() => {
-    console.log(sectionWordList);
-
     const fetchUserAnswers = async () => {
       const { data: result, error } = await supabase
         .from("answers")
@@ -123,16 +123,6 @@ const Review = () => {
               </Tr>
             </Thead>
             <Tbody>
-              {/* {answers &&
-              answers.map((word) => (
-                <Tr key={word.id}>
-                  <Td>{word.word}</Td>
-                  <Td>{word.explain}</Td>
-                  <Td>{word.type}</Td>
-                  <Td>{word.answer ? word.answer.answer || "" : "回答なし"}</Td>
-                  <Td>{word.answer ? (word.answer.correct ? "◯" : "✗") : "回答なし"}</Td>
-                </Tr>
-              ))} */}
               {answers &&
                 answers.map((word) => {
                   return !isMobile ? (

@@ -5,9 +5,6 @@ const Header = () => {
   return (
     <>
       <div>Header</div>
-      <Link href={{ pathname: "/review" }}>
-        <a>復習ページへ</a>
-      </Link>
     </>
   );
 };

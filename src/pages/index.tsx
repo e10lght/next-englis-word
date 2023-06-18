@@ -3,10 +3,10 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import Sections from "../components/sections";
+import Section from "../components/section";
 import Header from "../components/header";
 import supabase from "../../utils/supabase";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { userState } from "@/store/auth";
 import { useRecoilState } from "recoil";
 
@@ -20,8 +20,15 @@ type User = {
   password: string;
 };
 
+type SectionType = {
+  id: number;
+  created_at: string;
+  name: string;
+};
+
 export default function Home() {
   const [user, setUser] = useRecoilState(userState);
+  const [sectionData, setSectionData] = useState<SectionType[]>();
   useEffect(() => {
     const fetchUser = async () => {
       const { data: result, error } = await supabase
@@ -34,6 +41,12 @@ export default function Home() {
       const userData = result as User;
       if (!error) {
         setUser(userData);
+      }
+      const { data: section, error: sectionError } = await supabase.from("section").select();
+      console.log(section);
+      const sections = section as SectionType[];
+      if (!error) {
+        setSectionData(sections);
       }
     };
     fetchUser();
@@ -48,9 +61,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Sections />
-      <Sections />
-      <Sections />
+      {sectionData?.map((section) => (
+        <Section
+          name={section.name}
+          id={section.id}
+          created_ad={section.created_at}
+          key={section.id}
+        />
+      ))}
     </>
   );
 }
