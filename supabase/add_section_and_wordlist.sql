@@ -19,7 +19,7 @@ INSERT INTO
         exampleanswer,
         type,
         explain,
-        sectionid
+        section_id
     )
 VALUES
     (

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import supabase from "../../utils/supabase";
 import json from "../json/sample.json";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { userState } from "@/store/auth";
+import { wordListState } from "@/store/auth";
 
 type Words = {
   id: number;
@@ -14,7 +14,7 @@ type Words = {
   exampleanswer?: string;
   type: string;
   explain: string;
-  sectionid: string;
+  section_id: string;
 };
 
 const Questions = () => {
@@ -22,31 +22,32 @@ const Questions = () => {
   const [wordList, setWordList] = useState<Words[]>([]);
   const [correctAnswer, setCorrectAnswer] = useState<Words>();
   // useRecoilValueで値だけ宣言することも可能
-  const user = useRecoilValue(userState);
+  const sectionWordList = useRecoilValue(wordListState);
 
   useEffect(() => {
     // apiなどからユーザー情報を取得して、setUserでグローバルstateを更新する
-    console.log(user);
+    console.log(sectionWordList);
 
     const fetchWordList = async () => {
       const { data: resultWordList, error: wordListError } = await supabase
         .from("wordlist")
         .select()
-        .eq("sectionid", 18);
+        .eq("section_id", 18);
       return resultWordList as Words[];
     };
 
     const getWordList = async () => {
-      const resultWordList = await fetchWordList();
-      setWordList(resultWordList);
-      console.log(resultWordList);
+      //   const resultWordList = await fetchWordList();
+      //   setWordList(resultWordList);
+      //   console.log(resultWordList);
+      setWordList(sectionWordList);
 
-      const ramdom = Math.floor(Math.random() * resultWordList.length);
+      const ramdom = Math.floor(Math.random() * sectionWordList.length);
       console.log(ramdom);
-      const selectWord = resultWordList[ramdom] as Words;
-      resultWordList.splice(ramdom, 1);
-      console.log(resultWordList.length);
-      setWordList(resultWordList);
+      const selectWord = sectionWordList[ramdom] as Words;
+      sectionWordList.splice(ramdom, 1);
+      console.log(sectionWordList.length);
+      setWordList(sectionWordList);
 
       console.log(selectWord.word);
       console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));

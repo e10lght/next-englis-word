@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import supabase from "../../utils/supabase";
-import { userState } from "../store/auth";
+import { wordListState } from "../store/auth";
 
 type Words = {
   id: number;
@@ -13,21 +13,21 @@ type Words = {
   exampleanswer?: string;
   type: string;
   explain: string;
-  sectionid: string;
+  section_id: string;
 };
 
 const Choice = () => {
-  const [userr, setUser] = useRecoilState(userState);
+  const [sectionWordList, setSectionWordList] = useRecoilState(wordListState);
 
   useEffect(() => {
     const fetchWordList = async () => {
       const { data: resultWordList, error: wordListError } = await supabase
         .from("wordlist")
         .select()
-        .eq("sectionid", 18);
+        .eq("section_id", 18);
       const result = resultWordList as Words[];
       console.log(result);
-      setUser(result);
+      setSectionWordList(result);
       return resultWordList as Words[];
     };
     fetchWordList();
@@ -40,6 +40,9 @@ const Choice = () => {
       </Link>
       <Link href={{ pathname: "/itemlist" }}>
         <a>単語一覧</a>
+      </Link>
+      <Link href={{ pathname: "/review" }}>
+        <a>復習ページへ</a>
       </Link>
     </>
   );

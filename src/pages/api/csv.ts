@@ -62,6 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         file = file[0];
       }
 
+      //   const read = fs.createReadStream(file.filepath, { encoding: "utf8" });
       const read = createReadStream(file.filepath, { encoding: "utf8" });
       const parser = parse(); // csvファイルをパースする変換ストリーム
       read.pipe(parser); // parserが出力ストリーム
@@ -91,7 +92,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
           exampleanswer: chunk[2],
           type: chunk[3],
           explain: chunk[4],
-          sectionid: sectionid,
+          section_id: sectionid,
         };
         console.log(wordListData);
         const { error: insertWordlistError } = await supabase.from("wordlist").insert(wordListData);
