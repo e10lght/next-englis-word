@@ -1,11 +1,24 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import supabase from "../../utils/supabase";
-import json from "../json/sample.json";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { wordListState } from "@/store/auth";
+import { userState, wordListState } from "@/store/auth";
 import { useRouter } from "next/router";
-import e from "express";
+import supabase from "../../utils/supabase";
+import {
+  Box,
+  Button,
+  Input,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Stack,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 
 type Words = {
   id: number;
@@ -19,11 +32,21 @@ type Words = {
   section_id: string;
 };
 
+type User = {
+  id: number;
+  created_at: Date;
+  name: string;
+  email: string;
+  password: string;
+};
+
 const Questions = () => {
   const [answer, setAnswer] = useState("");
   const [wordList, setWordList] = useState<Words[]>([]);
   const [correctAnswer, setCorrectAnswer] = useState<Words>();
   const [removeIds, setRemoveId] = useState<string[]>([]);
+  const user = useRecoilValue<User>(userState);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   // useRecoilValueで値だけ宣言することも可能
   const sectionWordList = useRecoilValue(wordListState);
   const router = useRouter();
@@ -32,30 +55,17 @@ const Questions = () => {
   useEffect(() => {
     // apiなどからユーザー情報を取得して、setUserでグローバルstateを更新する
     console.log("useEffect");
-    // console.log(sectionWordList);
     console.log(removeIds);
+    console.log(id);
 
     const getWordList = async (id: string) => {
       setWordList(sectionWordList);
-      //   const ramdom = Math.floor(Math.random() * sectionWordList.length);
-      //   console.log(ramdom);
-
-      //   let selectWord;
-      //   if (id) {
       const selectWord = sectionWordList[Number(id)] as Words;
-      //   } else {
-      //     selectWord = sectionWordList[ramdom] as Words;
-      //   }
-      //   sectionWordList.splice(ramdom, 1);
-      //   console.log(sectionWordList.length);
       let isDuplicateId = removeIds.find((removeId) => removeId === id);
       if (!isDuplicateId) {
         setRemoveId([...removeIds, id]);
       }
       setWordList(sectionWordList);
-
-      //   console.log(selectWord.word);
-      //   console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
       selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
       setCorrectAnswer(selectWord);
     };
@@ -66,9 +76,20 @@ const Questions = () => {
   const inputAnswer = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
   };
-  const submitAnswer = () => {
-    // console.log(answer);
-    // console.log(answer === correctAnswer!.word);
+  const submitAnswer = async () => {
+    // あとは回答の判定結果と回答をanswersテーブルにinsertする
+    const insertAnswer = {
+      user_id: user.id,
+      wordlist_id: correctAnswer?.id,
+      correct: answer.toLowerCase() === correctAnswer?.word.toLowerCase(),
+      answer: answer,
+    };
+
+    onOpen();
+
+    const { error } = await supabase.from("answers").insert(insertAnswer);
+    console.log(error);
+
     setAnswer("");
   };
   const nextQuestion = () => {
@@ -86,20 +107,13 @@ const Questions = () => {
       });
     }
     console.log(ramdom);
+    setAnswer("");
+    onClose();
 
     router.push({
       pathname: router.pathname,
       query: { id: ramdom },
     });
-
-    // const selectWord = wordList[ramdom] as Words;
-    // const targetWordList = [...wordList];
-    // targetWordList.splice(ramdom, 1);
-    // setWordList(targetWordList);
-    // console.log(selectWord.word);
-    // console.log(selectWord.example?.replace(selectWord.word, "[   ?   ]"));
-    // selectWord.example = selectWord.example?.replace(selectWord.word, "[　?　]");
-    // setCorrectAnswer(selectWord);
   };
 
   return (
@@ -116,10 +130,39 @@ const Questions = () => {
       <p>{correctAnswer && correctAnswer.exampleanswer}</p>
       <p>{correctAnswer && correctAnswer.type}</p>
       <p>{correctAnswer && correctAnswer.word}</p>
-      <input type="text" onChange={inputAnswer} />
-      <button onClick={submitAnswer}>回答</button>
-      <button>PASS</button>
-      <button onClick={nextQuestion}>次の問題</button>
+      <Stack spacing={3} m={5}>
+        <Input
+          type="text"
+          placeholder="ここに回答を入力する"
+          size="lg"
+          onChange={inputAnswer}
+          value={answer}
+        />
+      </Stack>
+      <Box display="flex" justifyContent="space-between" m={5}>
+        <Button flexGrow={1} mx={1} colorScheme="blue" onClick={submitAnswer}>
+          回答
+        </Button>
+        <Button flexGrow={1} mx={1} colorScheme="red" onClick={nextQuestion}>
+          PASS
+        </Button>
+      </Box>
+
+      <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalBody>
+            <Text>ここに正解とか、解説とかを載せる？</Text>
+            <Text>ここに正解とか、解説とかを載せる？</Text>
+            <Text>ここに正解とか、解説とかを載せる？</Text>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button onClick={nextQuestion}>次の問題</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

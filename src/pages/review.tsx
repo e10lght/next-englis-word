@@ -84,7 +84,8 @@ const Review = () => {
       answerResult = result! as Answers[];
       console.log(answerResult);
       const merged = sectionWordList.map((word) => {
-        const answer = answerResult.find((answer) => answer.wordlist_id === word.id);
+        // 複数回答ある場合、最新の結果を参照するために末尾から検索するようにする
+        const answer = [...answerResult].reverse().find((answer) => answer.wordlist_id === word.id);
         console.log(answer);
         return {
           ...word,
